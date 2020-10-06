@@ -54,17 +54,17 @@ public class Game {
   }
 
   private void dealRoundOfCards() {
-    // deal first round of cards, players first
+    // deal cards to players first
     dealCardToPlayer();
     dealCardToDealer();
   }
 
-  private boolean dealCardToDealer() {
-    return dealerHand.add(deck.draw());
+  private void dealCardToDealer() {
+    dealerHand.add(deck.draw());
   }
 
-  private boolean dealCardToPlayer() {
-    return playerHand.add(deck.draw());
+  private void dealCardToPlayer() {
+    playerHand.add(deck.draw());
   }
 
   public void play() {
