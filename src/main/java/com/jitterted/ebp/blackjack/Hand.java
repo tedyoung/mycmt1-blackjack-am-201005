@@ -42,4 +42,24 @@ public class Hand {
   void displayFirstCardFaceUp() {
     System.out.println(cards.get(0).display()); // first card is Face Up
   }
+
+  boolean isBusted() {
+    return value() > 21;
+  }
+
+  boolean beats(Hand hand) {
+    return hand.value() < value();
+  }
+
+  boolean pushes(Hand hand) {
+    return hand.value() == value();
+  }
+
+  boolean isValueLessThanOrEqualTo(int target) {
+    return value() <= target;
+  }
+
+  void displayHandValue() {
+    System.out.println(" (" + value() + ")");
+  }
 }
