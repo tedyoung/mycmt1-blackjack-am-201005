@@ -12,10 +12,18 @@ public class HandValueAceTest {
 
   @Test
   public void handWithOneAceTwoCardsIsValuedAt11() throws Exception {
-    Hand hand = createHand("A", "5");
+    Hand hand = createHand("A", "9");
 
     assertThat(hand.value())
-        .isEqualTo(11 + 5);
+        .isEqualTo(11 + 9);
+  }
+
+  @Test
+  public void handWithOneAceAndOtherCardsValuedAt10IsValuedAt11() throws Exception {
+    Hand hand = createHand("A", "10");
+
+    assertThat(hand.value())
+        .isEqualTo(11 + 10);
   }
 
   @Test
